@@ -1,33 +1,29 @@
 {
-  "headers": [
+  "version": 2,
+  "builds": [
     {
-     "version": 2,
-     "builds": [
-  {
-  "src": "src/index.js",
-  "use": "@vercel/node"
-  }
+      "src": "server/src/index.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-  {
-  "src": "/(.*)",
-  "dest": "src/index.js"
-  }
+    {
+      "src": "/(.*)",
+      "dest": "server/src/index.js"
+    }
   ],
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
-        }
-      ]
+  "headers": [
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET, POST, PUT, DELETE, OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Authorization"
     }
   ],
   "rewrites": [
@@ -54,7 +50,6 @@
     {
       "source": "logout",
       "destination": "https://weather-app-backend.vercel.app/logout"
-    },
-    
+    }
   ]
 }
