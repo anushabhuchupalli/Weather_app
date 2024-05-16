@@ -20,32 +20,29 @@
   ],
   "rewrites": [
     {
-      "source": "/auth/signup",
+      "source": "auth/signup",
       "destination": "https://weather-app-backend.vercel.app/auth/signup"
     },
     {
-      "source": "/auth/login",
+      "source": "auth/login",
       "destination": "https://weather-app-backend.vercel.app/auth/login"
     },
     {
-      "source": "/auth/forgot-password",
+      "source": "auth/forgot-password",
       "destination": "https://weather-app-backend.vercel.app/auth/forgot-password"
     },
     {
-      "source": "/auth/reset-password/(.*)",
+      "source": "auth/reset-password/(.*)",
       "destination": "https://weather-app-backend.vercel.app/auth/reset-password/$1"
     },
     {
-      "source": "/verify",
+      "source": "verify",
       "destination": "https://weather-app-backend.vercel.app/verify"
     },
     {
-      "source": "/logout",
+      "source": "logout",
       "destination": "https://weather-app-backend.vercel.app/logout"
     },
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
+    
   ]
 }
