@@ -23,8 +23,9 @@ const verifyToken = (req, res, next) => {
   }
 };
 
+
 // Signup route
-router.post("/signup", async (req, res) => {
+router.post("auth/signup", async (req, res) => {
   const { username, email, password } = req.body;
 
   try {
@@ -36,7 +37,6 @@ router.post("/signup", async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 12);
     const newUser = new User({ username, email, password: hashedPassword });
     await newUser.save();
-
     return res.status(201).json({ status: true, message: "User registered successfully" });
   } catch (error) {
     console.error("Error signing up user:", error);
@@ -45,7 +45,7 @@ router.post("/signup", async (req, res) => {
 });
 
 // Login route
-router.post("/login", async (req, res) => {
+router.post("auth/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -69,7 +69,7 @@ router.post("/login", async (req, res) => {
 });
 
 // Forgot password route
-router.post("/forgot-password", async (req, res) => {
+router.post("auth/forgot-password", async (req, res) => {
   const { email } = req.body;
 
   try {
@@ -110,7 +110,7 @@ router.post("/forgot-password", async (req, res) => {
 });
 
 // Reset password route
-router.post("/reset-password/:token", async (req, res) => {
+router.post("auth/reset-password/:token", async (req, res) => {
   const { token } = req.params;
   const { password } = req.body;
 
