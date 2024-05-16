@@ -26,7 +26,6 @@
       "value": "Content-Type, Authorization"
     }
   ],
-  {
   "rewrites": [
     {
       "source": "auth/signup",
