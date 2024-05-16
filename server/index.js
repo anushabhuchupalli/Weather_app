@@ -11,7 +11,7 @@ import cors from 'cors'
 const app = express()
 app.use(cors(
     {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
+        origin: ["https://deploy-mern-frontend-blue.vercel.app"],
         methods: ["POST", "GET","PUT","DELETE"],
         credentials: true
     }
