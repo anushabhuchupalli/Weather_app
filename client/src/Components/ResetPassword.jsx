@@ -13,7 +13,7 @@ const ResetPassword = () => {
       e.preventDefault();
   
       try {
-        const response = await Axios.post(`http://localhost:3000/auth/reset-password/${token}`, {
+        const response = await Axios.post(`https://weather-app-beta-five-74.vercel.app/auth/reset-password/${token}`, {
           password,
         });
         console.log(response);

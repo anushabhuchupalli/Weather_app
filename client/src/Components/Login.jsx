@@ -12,7 +12,7 @@ const Login = () => {
   Axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3000/auth/login", {
+    Axios.post("https://weather-app-beta-five-74.vercel.app/auth/login", {
       email,
       password,
     }).then(response => {

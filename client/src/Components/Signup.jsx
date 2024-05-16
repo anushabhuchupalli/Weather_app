@@ -12,7 +12,7 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3000/auth/signup", {
+    Axios.post("https://weather-app-beta-five-74.vercel.app/auth/signup", {
       username,
       email,
       password,

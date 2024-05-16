@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     try {
-      const response = await Axios.post("http://localhost:3000/auth/forgot-password", {
+      const response = await Axios.post("https://weather-app-beta-five-74.vercel.app/auth/forgot-password", {
         email,
       });
 
