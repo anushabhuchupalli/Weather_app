@@ -10,7 +10,8 @@ import userRoutes from "./routes/userRoutes.js";
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://weather-app-vg6e.vercel.app/"],
+    methods: ["POST", "GET"],
     credentials: true
 }))
 app.use(cookieParser())
