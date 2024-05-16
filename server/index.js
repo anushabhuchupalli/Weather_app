@@ -26,7 +26,7 @@ app.get("/",(req,res) => {
 
 mongoose.connect('mongodb://127.0.0.1:27017/authentication')
 
-const PORT = process.env.PORT || 3001; // Default port 3000
+const PORT = 3001; // Default port 3000
 
 app.listen(PORT, () => {
     console.log("Server is Running")
