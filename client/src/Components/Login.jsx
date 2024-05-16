@@ -10,20 +10,19 @@ const Login = () => {
   const navigate = useNavigate()
 
   Axios.defaults.withCredentials = true;
- const handleSubmit = (e) => {
-  e.preventDefault();
-  Axios.post("https://weather-app-beta-five-74.vercel.app/auth/login", {
-    username,
-    email,
-    password,
-  }).then(response => {
-    if(response.data.status) {
-      navigate('/login');
-    }
-  }).catch(err => {
-    console.log(err);
-  });
-};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Axios.post("https://weather-app-beta-five-74.vercel.app/auth/login", {
+      email,
+      password,
+    }).then(response => {
+        if(response.data.status) {
+            navigate('/Home')
+        }
+    }).catch(err => {
+        console.log(err)
+    })
+  };
   return (
     <div className="sign-up-container">
       <form className="sign-up-form" onSubmit={handleSubmit}>

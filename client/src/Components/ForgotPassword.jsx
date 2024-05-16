@@ -6,13 +6,15 @@ import { useNavigate } from "react-router-dom";
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
-  Axios.defaults.withCredentials = true;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await Axios.post("https://weather-app-beta-five-74.vercel.app/auth/forgot-password", {email});
+      const response = await Axios.post("https://weather-app-beta-five-74.vercel.app/auth/forgot-password", {
+        email,
+      });
+
       if (response.data.status) {
         alert("Check your email for the reset password link.");
         navigate('/login');
