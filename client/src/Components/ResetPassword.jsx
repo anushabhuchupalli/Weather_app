@@ -8,7 +8,8 @@ const ResetPassword = () => {
     const {token} = useParams()
   
     const navigate = useNavigate()
-  
+    Axios.defaults.withCredentials = true;
+
     const handleSubmit = async (e) => {
       e.preventDefault();
   
