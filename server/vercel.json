@@ -25,31 +25,5 @@
       "key": "Access-Control-Allow-Headers",
       "value": "Content-Type, Authorization"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "auth/signup",
-      "destination": "https://weather-app-beta-five-74.vercel.app/auth/signup"
-    },
-    {
-      "source": "auth/login",
-      "destination": "https://weather-app-beta-five-74.vercel.app/auth/login"
-    },
-    {
-      "source": "auth/forgot-password",
-      "destination": "https://weather-app-beta-five-74.vercel.app/auth/forgot-password"
-    },
-    {
-      "source": "auth/reset-password/(.*)",
-      "destination": "https://weather-app-beta-five-74.vercel.app/auth/reset-password/$1"
-    },
-    {
-      "source": "verify",
-      "destination": "https://weather-app-beta-five-74.vercel.app/verify"
-    },
-    {
-      "source": "logout",
-      "destination": "https://weather-app-beta-five-74.vercel.app/logout"
-    }
   ]
 }
