@@ -20,9 +20,6 @@ app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser())
 app.use('/auth', userRoutes)
-app.get("/",(req,res) => {
-    res.json("hello");
-});
 
 mongoose.connect('mongodb://127.0.0.1:27017/authentication')
 
