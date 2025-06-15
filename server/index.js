@@ -10,7 +10,7 @@ import cors from 'cors'
 
 const app = express()
 const corsOptions = {
-  origin: ["https://deploy-mern-frontend-blue.vercel.app"],
+  origin: ["http://localhost:3000"], 
   methods: ["POST", "GET", "PUT", "DELETE"],
   credentials: true
 };
